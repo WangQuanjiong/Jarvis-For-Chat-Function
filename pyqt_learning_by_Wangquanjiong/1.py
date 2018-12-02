@@ -6,11 +6,8 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-import sys
-#form PyQt5.QtCore import
-import PyQt5.QtCore 
-from PyQt5 import QtCore, QtGui,QtWidgets
-import PyQt5.QtGui
+from PyQt5 import QtCore, QtGui, QtWidgets
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -74,16 +71,3 @@ class Ui_MainWindow(object):
         self.toolButton.setText(_translate("MainWindow", "..."))
         self.checkBox.setText(_translate("MainWindow", "CheckBox"))
 
-if __name__ == '__main__':
-     
-    style = open(r"D:\2018software\QssUI\StyleSheets\MetroUI.qss","r",encoding='utf-8')
-    style_str = style.read()
-    #style_str = style_str.decode('utf-8')
-    
-    app = QtWidgets.QApplication(sys.argv)
-    app.setStyleSheet(style_str)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
